@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82B217CA-5CD1-4D7D-80D0-3C2935094D0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>English_Learning_Software1</RootNamespace>
+    <AssemblyName>English_Learning_Software1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>C:\Users\Administrator\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>C:\Users\Administrator\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>C:\Users\Administrator\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Models\EnglishDBContext.cs" />
+    <Compile Include="Models\Ownere.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Quiz_Detail.cs" />
+    <Compile Include="Models\Story.cs" />
+    <Compile Include="Models\Story_Detail.cs" />
+    <Compile Include="Models\Test.cs" />
+    <Compile Include="Models\Test_Detail.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\Video_Detail.cs" />
+    <Compile Include="Models\Vocabulary.cs" />
+    <Compile Include="Models\Vocabulary_Type.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlAdmin\Chart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAdmin\Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlAdmin\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAdmin\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlAdmin\NewwordManagerment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAdmin\NewwordManagerment.Designer.cs">
+      <DependentUpon>NewwordManagerment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlAdmin\Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAdmin\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlAdmin\StoriesManagerment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAdmin\StoriesManagerment.Designer.cs">
+      <DependentUpon>StoriesManagerment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlAdmin\TestzManagerment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAdmin\TestzManagerment.Designer.cs">
+      <DependentUpon>TestzManagerment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlAdmin\UserManagerment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAdmin\UserManagerment.Designer.cs">
+      <DependentUpon>UserManagerment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlAdmin\VideoManagerment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAdmin\VideoManagerment.Designer.cs">
+      <DependentUpon>VideoManagerment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\AccountManagerment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\AccountManagerment.Designer.cs">
+      <DependentUpon>AccountManagerment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\CheckUpVoca.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\CheckUpVoca.Designer.cs">
+      <DependentUpon>CheckUpVoca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\ChooseStories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\ChooseStories.Designer.cs">
+      <DependentUpon>ChooseStories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\ChooseTestz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\ChooseTestz.Designer.cs">
+      <DependentUpon>ChooseTestz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\Googletranslate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\Googletranslate.Designer.cs">
+      <DependentUpon>Googletranslate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\ChooseLession.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\ChooseLession.Designer.cs">
+      <DependentUpon>ChooseLession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\NewwordImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\NewwordImage.Designer.cs">
+      <DependentUpon>NewwordImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\Result.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\Stories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\Stories.Designer.cs">
+      <DependentUpon>Stories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\Testz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\Testz.Designer.cs">
+      <DependentUpon>Testz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlHome\Videoz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlHome\Videoz.designer.cs">
+      <DependentUpon>Videoz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlLogin\FogotPassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLogin\FogotPassword.Designer.cs">
+      <DependentUpon>FogotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlLogin\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLogin\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlLogin\SignUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLogin\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserControlHome\Videoz.resx">
+      <DependentUpon>Videoz.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Image\video-camera-icon.png" />
+    <None Include="Image\Adobe-Story-icon.png" />
+    <None Include="Image\books-icon.png" />
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlAdmin\Chart.resx">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAdmin\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAdmin\NewwordManagerment.resx">
+      <DependentUpon>NewwordManagerment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAdmin\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAdmin\StoriesManagerment.resx">
+      <DependentUpon>StoriesManagerment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAdmin\TestzManagerment.resx">
+      <DependentUpon>TestzManagerment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAdmin\UserManagerment.resx">
+      <DependentUpon>UserManagerment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAdmin\VideoManagerment.resx">
+      <DependentUpon>VideoManagerment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\AccountManagerment.resx">
+      <DependentUpon>AccountManagerment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\CheckUpVoca.resx">
+      <DependentUpon>CheckUpVoca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\ChooseStories.resx">
+      <DependentUpon>ChooseStories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\ChooseTestz.resx">
+      <DependentUpon>ChooseTestz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\Googletranslate.resx">
+      <DependentUpon>Googletranslate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\ChooseLession.resx">
+      <DependentUpon>ChooseLession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\NewwordImage.resx">
+      <DependentUpon>NewwordImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\Stories.resx">
+      <DependentUpon>Stories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\Testz.resx">
+      <DependentUpon>Testz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlHome\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlLogin\FogotPassword.resx">
+      <DependentUpon>FogotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlLogin\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlLogin\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\man %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Captur1e.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\book-stack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Study-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Toy-Story-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\video-marketing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Test-paper-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\quiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Evernote-Book-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\student %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\trophy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Log-Out-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\cogwheels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\329780_doraemon-hd-wallpapers_1920x1080_h.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\252801165_312027263740531_4704542567311763043_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\265780111_314157630616327_1999461935886575865_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\view1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\White-Wallpaper-hinh-nen-trang-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Book-Blank-Book-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Toy-Story-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Button-Play-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Test-paper-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Reports-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\background-hoa-trang_031951653.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\fond-plancher-texture-bois-blanc_53876-63646.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\1478594.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\toys-flat-design-background-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\background-powerpoint-dep %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\chart-search-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
